@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: 'a[href]',
+  standalone: true
 })
 export class ExternalLinkDirective {
   @HostBinding('attr.rel') relAttr = null;
