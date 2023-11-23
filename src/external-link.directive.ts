@@ -6,9 +6,9 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true
 })
 export class ExternalLinkDirective {
-  @HostBinding('attr.rel') relAttr = null;
-  @HostBinding('attr.target') targetAttr = null;
-  @Input() href: string;
+  @HostBinding('attr.rel') relAttr: string | null = null;
+  @HostBinding('attr.target') targetAttr: string | null = null;
+  @Input() href = '';
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: string,
